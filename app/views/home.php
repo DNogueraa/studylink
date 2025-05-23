@@ -27,7 +27,8 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
-
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -131,35 +132,95 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
             </div>
         </section>
 
+        <section class="home_sec_5_faqs">
+            <div class="faqs_container">
+                <!-- Columna izquierda: imagen -->
+                <div class="faqs_izquierda">
+                    <img src="<?= BASE_URL ?>/public/images/mapa_latinoamerica.png" alt="Latinoamérica">
+                </div>
 
+                <!-- Columna derecha: preguntas -->
+                <div class="faqs_derecha">
+                    <h2 class="faqs_titulo">FAQs</h2>
+                    <ul class="faqs_lista">
+                        <li>¿Cómo se realiza el pago del servicio de StudyLink?</li>
+                        <li>¿StudyLink ofrece apoyo después de que llegue a España?</li>
+                        <li>¿Puedo estudiar y trabajar en España al mismo tiempo?</li>
+                        <li>¿Necesito un seguro médico para estudiar en España?</li>
+                        <li>¿Qué pasa si mi visa de estudiante es rechazada?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer_contenedor">
+                <!-- Columna izquierda -->
+                <div class="footer_columna">
+                    <div class="footer_logo">
+                        <img src="<?= BASE_URL ?>/public/images/logo_mejorado.png" alt="Logo StudyLink">
+                        <span>StudyLink</span>
+                    </div>
+                    <p class="footer_eslogan">De latam a Europa en un click</p>
+                    <p>Teléfono: (+34) 657 495 21 – (+34) 644 039 875</p>
+                    <p>Correo: studylinklatam@gmail.com</p>
+                </div>
+
+                <!-- Columna enlaces -->
+                <div class="footer_columna">
+                    <ul class="footer_enlaces">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#quienes">¿Quiénes somos?</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna redes -->
+                <div class="footer_columna">
+                    <p class="footer_siguenos">Síguenos</p>
+                    <div class="footer_redes">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_copy">
+                © 2025 Todos los derechos reservados | <a href="#">Aviso legal, de Privacidad y Cookies</a>
+            </div>
+        </footer>
 
     </main>
     <script>
-  new Glider(document.querySelector('.glider'), {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    draggable: true,
-    dots: '.dots',
-    arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
-    },
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3
-        }
-      }
-    ]
-  });
-</script>
+        new Glider(document.querySelector('.glider'), {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            draggable: true,
+            dots: '.dots',
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            },
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ]
+        });
+    </script>
 </body>
 
 </html>
