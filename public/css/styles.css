@@ -1,9 +1,14 @@
 body {
   width: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   background-color: #ffffff;
   color: #333;
+}
+
+body h2, h3{
+    font-family: "Playfair Display", serif !important;
+    
 }
 
 .encabezado {
@@ -73,8 +78,8 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-.main_sec_1{
+/*------------------ section 1------------*/
+.home_sec_1{
     background-image: url(../images/positivo-joven-hombre-y-mujer-trabajando-juntos.jpg);
     width: 100%;
     height: 555px;
@@ -86,7 +91,7 @@ body {
     flex-direction: row;
 }
 
-.main_sec_1 div{
+.home_sec_1 div{
     width: 50%;
     height: 555px;
     display: flex;
@@ -95,7 +100,7 @@ body {
     justify-content: center;
 }
 
-.main_sec_1 div h1{
+.home_sec_1 div h1{
     font-size: 90px;
 }
 .butom_ver_tramite{
@@ -112,3 +117,211 @@ body {
   border: none;
   transition: background-color 0.3s;
 }
+/*----------------------section 2----------------*/
+.home_sec_2{
+    width: 100%;
+    height: 555px;
+    background-color: #012030;
+    display: flex;
+    flex-direction: row;
+}
+
+.home_sec_2_div{
+    width: 50%;
+    height: 555px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}    
+
+.home_sec_2_article{
+    width: 50%;
+    height: 555px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home_sec_2 h2{
+    font-size: 50px;
+    color: #9AEBA3;
+    margin: 0px;
+}
+
+.home_sec_2 img{
+    width: 60%;
+    height: 450px;
+}
+.home_sec_2_article{
+    padding-top: 30px;
+}
+
+.home_sec_2_article div{
+    width: 70%;
+    height: 400px;
+    padding-top: 40px;
+    
+}
+
+.home_sec_2_div_button{
+    width: 100%;
+    height: 50px;
+    margin-left: 0px;
+    display: flex !important;
+    flex-direction: row;
+    align-content: flex-start
+}
+.button_mas_informacion{
+    width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  font-size: 15px;
+  background-color: #9AEBA3;
+  padding: 8px 14px;
+  border-radius: 30px;
+  margin-left: 5%;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.home_sec_2 article p{
+    color: white;
+    font-size: 20px !important;
+}
+
+/*---------------------section3-----------------*/
+
+.home_sec_3 {
+  width: 100%;
+  height: 550px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.home_sec_3_titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  margin-bottom: 0;
+  color: #012030;
+}
+
+.home_sec_3_contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap; /* por si se reduce el ancho */
+}
+
+.home_sec_3_article_1,
+.home_sec_3_article_2 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home_sec_3_article_1 h3,
+.home_sec_3_article_2 h3 {
+  font-size: 28px;
+  color: #012030;
+  margin-bottom: 10px;
+}
+
+.home_sec_3_article_1 img,
+.home_sec_3_article_2 img {
+  width: 80%;
+  height: 260px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.home_sec_3_button_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.home_sec_3_button {
+  font-family: 'Poppins', sans-serif;
+  background-color: #9AEBA3;
+  color: #012030;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home_sec_3_button:hover {
+  background-color: #7cd88a;
+}
+
+/*----------------------section4-----------*/
+.home_sec_4_blog {
+  width: 100%;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.home_sec_4_titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #012030;
+  margin-bottom: 40px;
+}
+
+.blog_cards_container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog_card {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.blog_card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog_card_texto {
+  position: absolute;
+  bottom: 0;
+  background: white;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.blog_card_texto h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #012030;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.blog_card_texto p {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+
