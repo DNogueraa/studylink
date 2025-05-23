@@ -1,3 +1,11 @@
+<?php
+require_once __DIR__ . '/../../config/config.php';
+require_once __DIR__ . '/../../app/controllers/BlogController.php';
+
+
+$blogController = new BlogController($conexion);
+$postsBlog = $blogController->obtenerPostsRecientes(3);
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -17,6 +25,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+
 </head>
 
 <body>
@@ -24,7 +35,7 @@
     <!-- Encabezado -->
     <header class="encabezado">
         <div class="contenedor">
-            <img src="../../public/images/logo_mejorado.png" alt="Logo StudyLink" class="logo">
+            <img src="<?= BASE_URL ?>/public/images/logo_mejorado.png" alt="Logo StudyLink" class="logo">
             <nav class="navegacion">
                 <a href="#">INICIO</a>
                 <a href="#">¿QUIÉNES SOMOS?</a>
@@ -49,7 +60,7 @@
         <section class="home_sec_2">
             <div class="home_sec_2_div">
                 <h2>¿Quiénes somos?</h2>
-                <img src="../../public/images/gestores.png" alt="">
+                <img src="<?= BASE_URL ?>/public/images/gestores.png" alt="">
             </div>
             <article class="home_sec_2_article">
                 <div>
@@ -75,7 +86,7 @@
                 <!-- Primer artículo -->
                 <article class="home_sec_3_article_1">
                     <h3>Con mi gente latino</h3>
-                    <img src="../../public/images/img_sec_tres.png" alt="Grupo de estudiantes latinos">
+                    <img src="<?= BASE_URL ?>/public/images/img_sec_tres.png" alt="Grupo de estudiantes latinos">
                     <div class="home_sec_3_button_container">
                         <button class="home_sec_3_button">MÁS INFORMACIÓN</button>
                     </div>
@@ -84,46 +95,71 @@
                 <!-- Segundo artículo -->
                 <article class="home_sec_3_article_2">
                     <h3>La combi completa</h3>
-                    <img src="../../public/images/img_sec_tres_dos.png" alt="Pareja de estudiantes con portátil">
+                    <img src="<?= BASE_URL ?>/public/images/img_sec_tres_dos.png"
+                        alt="Pareja de estudiantes con portátil">
                     <div class="home_sec_3_button_container">
                         <button class="home_sec_3_button">MÁS INFORMACIÓN</button>
                     </div>
                 </article>
             </div>
         </section>
-<!---->
+        <!---->
         <section class="home_sec_4_blog">
-  <h2 class="home_sec_4_titulo">Blog</h2>
+            <h2 class="home_sec_4_titulo">Blog</h2>
+            <div class="blog_cards_container">
+                <div class="glider-contain">
+                    <div class="glider">
+                        <?php foreach ($postsBlog as $post): ?>
+                            <a href="<?= BASE_URL ?>/app/views/blog.php?id=<?= $post['id'] ?>" class="blog_card_enlace">
+                                <article class="blog_card">
+                                    <img src="<?= BASE_URL ?>/public/images/<?= htmlspecialchars($post['imagen']) ?>"
+                                        alt="<?= htmlspecialchars($post['titulo']) ?>">
+                                    <div class="blog_card_texto">
+                                        <h3><?= strtoupper(htmlspecialchars($post['titulo'])) ?></h3>
+                                        <p><?= htmlspecialchars($post['resumen']) ?></p>
+                                    </div>
+                                </article>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
 
-  <div class="blog_cards_container">
-    <!-- Tarjeta de entrada de blog -->
-    <article class="blog_card">
-      <img src="img/blog1.jpg" alt="¿Por qué elegir StudyLink?">
-      <div class="blog_card_texto">
-        <h3>¿POR QUÉ ELEGIR STUDYLINK PARA TU ASESORÍA ESTUDIANTIL?</h3>
-        <p>¿Estás buscando casa? aquí podemos ayudarte</p>
-      </div>
-    </article>
+                    <button class="glider-prev">«</button>
+                    <button class="glider-next">»</button>
+                    <div role="tablist" class="dots"></div>
+                </div>
 
-    <article class="blog_card">
-      <img src="img/blog2.jpg" alt="Trámites para estudiar en España">
-      <div class="blog_card_texto">
-        <h3>10 TRÁMITES IMPRESCINDIBLES PARA ESTUDIAR EN ESPAÑA</h3>
-        <p>Documentos, visas y más..</p>
-      </div>
-    </article>
+            </div>
+        </section>
 
-    <article class="blog_card">
-      <img src="img/blog3.jpg" alt="Lo que nadie te dice">
-      <div class="blog_card_texto">
-        <h3>LO QUE NADIE TE DICE ANTES DE ESTUDIAR EN ESPAÑA</h3>
-        <p>Verdades que solo descubres cuando ya estás aquí</p>
-      </div>
-    </article>
-  </div>
-</section>
+
 
     </main>
+    <script>
+  new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: true,
+    dots: '.dots',
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    },
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3
+        }
+      }
+    ]
+  });
+</script>
 </body>
 
 </html>
