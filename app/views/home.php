@@ -34,21 +34,7 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
 <body>
 
     <!-- Encabezado -->
-    <header class="encabezado">
-        <div class="contenedor">
-            <img src="<?= BASE_URL ?>/public/images/logo_mejorado.png" alt="Logo StudyLink" class="logo">
-            <nav class="navegacion">
-                <a href="#">INICIO</a>
-                <a href="#">¿QUIÉNES SOMOS?</a>
-                <a href="#">SERVICIOS</a>
-                <a href="#">BLOG</a>
-                <a href="#">FAQ</a>
-                <button class="boton-contactanos">
-                    <p><strong>CONTÁCTANOS</strong></p>
-                </button>
-            </nav>
-        </div>
-    </header>
+    <?php include_once __DIR__ . '/layouts/header.php'; ?>
 
     <main class="home_main">
         <section class="home_sec_1">
@@ -86,7 +72,7 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
             <div class="home_sec_3_contenedor">
                 <!-- Primer artículo -->
                 <article class="home_sec_3_article_1">
-                    <h3>Con mi gente latino</h3>
+                    <h4>Con mi gente latino</h4>
                     <img src="<?= BASE_URL ?>/public/images/img_sec_tres.png" alt="Grupo de estudiantes latinos">
                     <div class="home_sec_3_button_container">
                         <button class="home_sec_3_button">MÁS INFORMACIÓN</button>
@@ -95,7 +81,7 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
 
                 <!-- Segundo artículo -->
                 <article class="home_sec_3_article_2">
-                    <h3>La combi completa</h3>
+                    <h4>La combi completa</h4>
                     <img src="<?= BASE_URL ?>/public/images/img_sec_tres_dos.png"
                         alt="Pareja de estudiantes con portátil">
                     <div class="home_sec_3_button_container">
@@ -152,47 +138,7 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
                 </div>
             </div>
         </section>
-
-        <footer class="footer">
-            <div class="footer_contenedor">
-                <!-- Columna izquierda -->
-                <div class="footer_columna">
-                    <div class="footer_logo">
-                        <img src="<?= BASE_URL ?>/public/images/logo_mejorado.png" alt="Logo StudyLink">
-                        <span>StudyLink</span>
-                    </div>
-                    <p class="footer_eslogan">De latam a Europa en un click</p>
-                    <p>Teléfono: (+34) 657 495 21 – (+34) 644 039 875</p>
-                    <p>Correo: studylinklatam@gmail.com</p>
-                </div>
-
-                <!-- Columna enlaces -->
-                <div class="footer_columna">
-                    <ul class="footer_enlaces">
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#quienes">¿Quiénes somos?</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Columna redes -->
-                <div class="footer_columna">
-                    <p class="footer_siguenos">Síguenos</p>
-                    <div class="footer_redes">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer_copy">
-                © 2025 Todos los derechos reservados | <a href="#">Aviso legal, de Privacidad y Cookies</a>
-            </div>
-        </footer>
+    <?php include_once __DIR__ . '/layouts/footer.php'; ?>
 
     </main>
     <script>

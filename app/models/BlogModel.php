@@ -30,4 +30,28 @@ class BlogModel {
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    /**
+     * Obtener el post más reciente
+     */
+
+    public function obtenerPostMasReciente() {
+        $sql = "SELECT * FROM posts_blog ORDER BY fecha_publicacion DESC LIMIT 1";
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+        /**
+     * Obtener un post sugerido (distinto al actual)
+     */
+    
+    public function obtenerSugerencia($excluirId) {
+        $sql = "SELECT * FROM posts_blog WHERE id != :id ORDER BY fecha_publicacion DESC LIMIT 1";
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->bindParam(':id', $excluirId, PDO::PARAM_INT);
+        $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+
 }

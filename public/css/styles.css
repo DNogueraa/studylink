@@ -62,7 +62,7 @@ body h2, h3{
 }
 
 .navegacion a:hover {
-  text-decoration: underline;
+  color: #DAFDBA;
 }
 
 .boton-contactanos {
@@ -82,14 +82,13 @@ body h2, h3{
 }
 
 .boton-contactanos:hover {
-  background-color: white;
+  background-color: #DAFDBA;
 }
 
 
 /* ----------------MAIN HOME.PHP-------------- */
 .home_main{
     width: 100%;
-    height: 1700px;
     background-color: aquamarine;
     display: flex;
     flex-direction: column;
@@ -133,6 +132,9 @@ body h2, h3{
   border: none;
   transition: background-color 0.3s;
 }
+.butom_ver_tramite:hover{
+    background-color: #DAFDBA;
+}
 /*----------------------section 2----------------*/
 .home_sec_2{
     width: 100%;
@@ -149,6 +151,8 @@ body h2, h3{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding-top: 30px;
+    box-sizing: border-box;
 }    
 
 .home_sec_2_article{
@@ -158,6 +162,8 @@ body h2, h3{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
+    text-align: justify;
 }
 
 .home_sec_2 h2{
@@ -188,6 +194,10 @@ body h2, h3{
     display: flex !important;
     flex-direction: row;
     align-content: flex-start
+}
+
+.home_sec_2_div_button button:hover{
+    background-color: #DAFDBA;
 }
 .button_mas_informacion{
     width: 60%;
@@ -228,7 +238,7 @@ body h2, h3{
 .home_sec_3_contenedor {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   gap: 40px;
   flex-wrap: wrap; /* por si se reduce el ancho */
 }
@@ -241,8 +251,8 @@ body h2, h3{
   align-items: center;
 }
 
-.home_sec_3_article_1 h3,
-.home_sec_3_article_2 h3 {
+.home_sec_3_article_1 h4,
+.home_sec_3_article_2 h4 {
   font-size: 28px;
   color: #012030;
   margin-bottom: 10px;
