@@ -3,8 +3,8 @@
 class BlogModel {
     private $conexion;
 
-    public function __construct($db) {
-        $this->conexion = $db;
+    public function __construct($conexion) {
+        $this->conexion = $conexion;
     }
 
     /**
@@ -41,9 +41,7 @@ class BlogModel {
         $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
-        /**
-     * Obtener un post sugerido (distinto al actual)
-     */
+    /*  Siempre devuelve el post más reciente que no sea el principal.
     
     public function obtenerSugerencia($excluirId) {
         $sql = "SELECT * FROM posts_blog WHERE id != :id ORDER BY fecha_publicacion DESC LIMIT 1";
@@ -52,6 +50,15 @@ class BlogModel {
         $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+*/
+    public function obtenerSugerencia($excluirId) {
+        $sql = "SELECT id, titulo, imagen, resumen FROM posts_blog WHERE id != :id ORDER BY RAND() LIMIT 1";
+        $stmt = $this->conexion->prepare($sql);
+        $stmt->bindParam(':id', $excluirId, PDO::PARAM_INT);
+        $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
 
 
 }
