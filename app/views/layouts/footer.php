@@ -15,7 +15,7 @@
                 <div class="footer_columna">
                     <ul class="footer_enlaces">
                         <li><a href="<?= BASE_URL ?>/app/views/home.php">Inicio</a></li>
-                        <li><a href="#quienes">¿Quiénes somos?</a></li>
+                        <li><a href="<?= BASE_URL ?>/app/views/quienes_somos.php">¿Quiénes somos?</a></li>
                         <li><a href="#servicios">Servicios</a></li>
                         <li><a href="<?= BASE_URL ?>/app/views/blog.php">Blog</a></li>
                         <li><a href="#faq">FAQ</a></li>
