@@ -44,7 +44,7 @@ $carruselPosts = $datos['carruselPosts'];
                 <a href="blog.php?id=<?= $post['id'] ?>"
                     class="bg-white rounded-xl overflow-hidden shadow-md hover:scale-[1.02] hover:shadow-lg transition-all duration-300">
                     <img src="<?= BASE_URL ?>/public/images/<?= htmlspecialchars($post['imagen']) ?>"
-                        alt="<?= htmlspecialchars($post['titulo']) ?>" class="w-full h-52 object-cover">
+                        alt="<?= htmlspecialchars($post['titulo']) ?>" class="w-full h-52 object-contein">
                     <div class="p-4 text-[#012030]">
                         <h3 class="text-lg font-bold mb-2"><?= $post['titulo'] ?></h3>
                         <p class="text-sm"><?= $post['resumen'] ?></p>
@@ -55,7 +55,7 @@ $carruselPosts = $datos['carruselPosts'];
     </section>
 
     <!-- Entrada principal -->
-    <section class="py-10 px-4 max-w-5xl mx-auto text-[#012030]">
+    <section class="py-10 px-4 max-w-5xl mx-auto text-[#012030] bg-[white]">
         <img src="<?= BASE_URL ?>/public/images/<?= htmlspecialchars($entradaPrincipal['imagen']) ?>"
             alt="Imagen de <?= htmlspecialchars($entradaPrincipal['titulo']) ?>"
             class="w-full max-h-[400px] object-contein rounded-xl shadow mb-6">

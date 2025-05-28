@@ -1,0 +1,101 @@
+/* Home Sec 1 responsive */
+@media (max-width: 768px) {
+  .home_sec_1 {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .home_sec_1 div {
+    width: 100%;
+  }
+
+  .home_sec_1 div h1 {
+    font-size: 48px;
+  }
+
+  .butom_ver_tramite {
+    width: auto;
+    font-size: 16px;
+    margin: 20px auto 0;
+  }
+}
+
+/* Home Sec 2 responsive */
+@media (max-width: 768px) {
+  .home_sec_2 {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .home_sec_2_div,
+  .home_sec_2_article {
+    width: 100%;
+    height: auto;
+  }
+
+  .home_sec_2 img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .home_sec_2_article div {
+    width: 90%;
+    padding: 20px 0;
+    height: auto;
+  }
+
+  .button_mas_informacion {
+    width: auto;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+}
+
+/* Home Sec 3 responsive */
+@media (max-width: 768px) {
+  .home_sec_3_article_1,
+  .home_sec_3_article_2 {
+    width: 90%;
+  }
+
+  .home_sec_3_button {
+    font-size: 16px;
+  }
+}
+
+/* Home Sec 4 blog responsive */
+@media (max-width: 768px) {
+  .home_sec_4_titulo {
+    font-size: 28px;
+  }
+
+  .blog_card img {
+    height: 220px;
+  }
+}
+
+/* Home Sec 5 faqs responsive */
+@media (max-width: 768px) {
+  .faqs_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faqs_izquierda,
+  .faqs_derecha {
+    width: 100%;
+    text-align: center;
+  }
+
+  .faqs_titulo {
+    font-size: 32px;
+  }
+
+  .faqs_lista li {
+    font-size: 16px;
+  }
+}
