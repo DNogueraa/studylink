@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultado = document.getElementById("resultadoTramite");
   const contenido = document.getElementById("contenidoTramite");
 
+  function escapeHTML(str) {
+  if (typeof str !== 'string') return str;
+  return str.replace(/[&<>"']/g, match => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  }[match]));
+}
+
   console.log("JS de verTramiteModal cargado");
 
   if (abrir && modal) {
@@ -81,14 +92,15 @@ document.addEventListener("DOMContentLoaded", () => {
         resultado.classList.remove("hidden");
 
         contenido.innerHTML = `
-          <p><strong>Estado:</strong> ${data.tramite.estado}</p>
-          <p><strong>Fecha de inicio:</strong> ${data.tramite.fecha_inicio}</p>
-          <p><strong>Última actualización:</strong> ${data.tramite.fecha_actualizacion}</p>
-          <p><strong>Tipo de trámite:</strong> ${data.tramite.tipo_tramite}</p>
-          <hr>
-          <p><strong>Usuario:</strong> ${data.usuario.nombre} ${data.usuario.apellido} (${data.usuario.email})</p>
-          <p><strong>Gestor:</strong> ${data.gestor.nombre} ${data.gestor.apellido} (${data.gestor.email})</p>
-        `;
+  <p><strong>Estado:</strong> ${escapeHTML(data.tramite.estado)}</p>
+  <p><strong>Fecha de inicio:</strong> ${escapeHTML(data.tramite.fecha_inicio)}</p>
+  <p><strong>Última actualización:</strong> ${escapeHTML(data.tramite.fecha_actualizacion)}</p>
+  <p><strong>Tipo de trámite:</strong> ${escapeHTML(data.tramite.tipo_tramite)}</p>
+  <hr>
+  <p><strong>Usuario:</strong> ${escapeHTML(data.usuario.nombre)} ${escapeHTML(data.usuario.apellido)} (${escapeHTML(data.usuario.email)})</p>
+  <p><strong>Gestor:</strong> ${escapeHTML(data.gestor.nombre)} ${escapeHTML(data.gestor.apellido)} (${escapeHTML(data.gestor.email)})</p>
+`;
+
       } else {
         alert("No se encontró el trámite o los datos no coinciden.");
       }

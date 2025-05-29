@@ -34,6 +34,7 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    
 
     <!--iconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -146,6 +147,12 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
                         <li><a href="faqs.php#faq-2">¿Puedo estudiar y trabajar en España al mismo tiempo?</a></li>
                         <li><a href="faqs.php#faq-3">¿Necesito un seguro médico para estudiar en España?</a></li>
                         <li><a href="faqs.php#faq-4">¿Qué pasa si mi visa de estudiante es rechazada?</a></li>
+                        <li><a href="faqs.php#faq-5">¿Cuánto tiempo tarda el proceso con StudyLink?</a></li>
+                        <li><a href="faqs.php#faq-6">¿Qué documentos necesito para aplicar a una visa de estudiante?</a>
+                        </li>
+                        <li><a href="faqs.php#faq-7">¿Puedo cambiar de curso o ciudad una vez en España?</a></li>
+                        <li><a href="faqs.php#faq-8">¿Qué pasa si necesito ayuda urgente estando en España?</a></li>
+                        <li><a href="faqs.php#faq-9">¿Puedo traer a un familiar conmigo mientras estudio?</a></li>
 
 
                     </ul>

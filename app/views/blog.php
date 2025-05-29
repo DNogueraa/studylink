@@ -15,6 +15,17 @@ $datos = $controlador->obtenerDatosParaVista($id);
 $entradaPrincipal = $datos['entradaPrincipal'];
 $sugerencia = $datos['sugerencia'];
 $carruselPosts = $datos['carruselPosts'];
+
+// Normalizar saltos de línea (por si vienen como \r\n)
+$contenido = str_replace("\r\n", "\n", $entradaPrincipal['contenido']);
+
+// Reemplazar los saltos simples (\n) por espacio
+$contenido = preg_replace("/(?<!\n)\n(?!\n)/", ' ', $contenido);
+
+// Separar los párrafos reales
+$parrafos = explode("\n\n", trim($contenido));
+
+
 ?>
 
 <!DOCTYPE html>
@@ -64,14 +75,17 @@ $carruselPosts = $datos['carruselPosts'];
         <div class="max-w-5xl mx-auto">
             <img src="<?= BASE_URL ?>/public/images/<?= htmlspecialchars($entradaPrincipal['imagen']) ?>"
                 alt="Imagen de <?= htmlspecialchars($entradaPrincipal['titulo']) ?>"
-                class="w-full max-h-[400px] object-contein rounded-xl shadow mb-6">
+                class="w-full max-h-[520px] object-contein rounded-xl shadow mb-6">
             <h1 class="text-4xl font-bold font-['Playfair_Display'] mb-2"><?= $entradaPrincipal['titulo'] ?></h1>
             <p class="text-sm text-gray-600 mb-6">Publicado el
                 <?= date('d \d\e F \d\e Y', strtotime($entradaPrincipal['fecha_publicacion'])) ?>
             </p>
-            <div class="text-base font-['Poppins'] leading-relaxed space-y-4">
-                <?= nl2br($entradaPrincipal['contenido']) ?>
-            </div>
+            <div class="max-w-3xl w-full mx-auto p-4 text-justify text-xl font-['Poppins'] leading-relaxed">
+  <?php foreach ($parrafos as $p): ?>
+    <p class="mb-6"><?= htmlspecialchars(trim($p)) ?></p>
+  <?php endforeach; ?>
+</div>
+
         </div>
     </section>
 

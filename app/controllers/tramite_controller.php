@@ -32,6 +32,7 @@ if ($tramite) {
       "email" => $gestor['EMAIL'] ?? ""
     ];
 
+    error_log("Consulta exitosa para ID: $identificador con email: $email");
     // ✅ Ahora es seguro acceder a $gestor['...']
     echo json_encode([
       "success" => true,
@@ -51,6 +52,5 @@ if ($tramite) {
     exit;
   }
 }
-
 
 echo json_encode(["success" => false, "error" => "Trámite o usuario no encontrados"]);
