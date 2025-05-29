@@ -28,8 +28,8 @@
       <div class="dropdown">
         <span class="dropdown-trigger">SERVICIOS ▾</span>
         <div class="dropdown-menu">
-          <a href="<?= BASE_URL ?>/app/views/combi_completa.php">La combi completa</a>
-          <a href="<?= BASE_URL ?>/app/views/gente_latino.php">Con mi gente latino</a>
+          <a href="<?= BASE_URL ?>/app/views/combi_completa.php">LA COMBI COMPLETA</a>
+          <a href="<?= BASE_URL ?>/app/views/gente_latino.php">CON MI GENTE LATINO</a>
         </div>
       </div>
 
@@ -46,8 +46,8 @@
   <nav class="navegacion-mobile" id="mobileMenu">
     <a href="<?= BASE_URL ?>/app/views/home.php">INICIO</a>
     <a href="<?= BASE_URL ?>/app/views/quienes_somos.php">¿QUIÉNES SOMOS?</a>
-    <a href="combi_completa.php">La combi completa</a>
-    <a href="gente_latino.php">Con mi gente latino</a>
+    <a href="combi_completa.php">LA COMBI COMPLETA</a>
+    <a href="gente_latino.php">CON MI GENTE LATINO</a>
     <a href="<?= BASE_URL ?>/app/views/blog.php">BLOG</a>
     <a href="<?= BASE_URL ?>/app/views/faqs.php">FAQS</a>
     <a href="<?= BASE_URL ?>/app/views/contactanos.php" class="boton-contactanos">Contáctanos</a>

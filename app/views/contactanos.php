@@ -10,9 +10,13 @@ require_once __DIR__ . '/../../config/config.php';
     <meta charset="UTF-8">
     <title>Contáctanos | StudyLink</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="../../public/images/logo_mejorado.png" type="image/png">
+
+    <!-- css-->
+    <link rel="stylesheet" href="../../public/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../../public/css/styles.css">
 </head>
 
 <body class="bg-white text-[#012030] font-sans">
@@ -121,7 +125,7 @@ require_once __DIR__ . '/../../config/config.php';
     <?php if (isset($_GET['mensaje']) && $_GET['mensaje'] == 'ok'): ?>
         <p class="text-green-600 text-center mt-6">¡Gracias! Tu mensaje fue enviado correctamente.</p>
     <?php endif; ?>
-        <?php include_once __DIR__ . '/layouts/footer.php'; ?>
+    <?php include_once __DIR__ . '/layouts/footer.php'; ?>
 </body>
 
 </html>

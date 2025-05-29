@@ -7,12 +7,17 @@ require_once __DIR__ . '/../../config/config.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>La combi completa</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../../public/images/logo_mejorado.png" type="image/png">
+
+    <!-- css-->
+    <link rel="stylesheet" href="../../public/css/styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../../public/css/styles.css">
+
     <!--iconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -21,14 +26,16 @@ require_once __DIR__ . '/../../config/config.php';
     <!-- Encabezado -->
     <?php include_once __DIR__ . '/layouts/header.php'; ?>
 
-    <section class="bg-cover bg-center bg-no-repeat text-white w-full" style="background-image: url('http://localhost/studylink/public/images/la-combi.png');">
+    <section class="bg-cover bg-center bg-no-repeat text-white w-full"
+        style="background-image: url('<?= BASE_URL ?>/public/images/palacio-de-la-comunicacion-en-el-atardecer-de-verano-madrid.jpg');">
         <div class="bg-[#012030]/80 w-full h-full px-6 py-12 md:px-16 md:py-20">
             <div class="max-w-7xl mx-auto grid md:grid-cols-[40%_1fr] gap-10 items-start px-6 md:px-16">
 
                 <!-- Columna izquierda (30%) -->
                 <div class="space-y-6">
                     <h2 class="text-4xl md:text-5xl font-title leading-tight">La combi<br>completa</h2>
-                    <a href="#" class="inline-block bg-[#DAFDBA] text-[#012030] font-semibold px-6 py-2 rounded-full hover:bg-[#9AEBA3] transition">
+                    <a href="<?= BASE_URL ?>/app/views/contactanos.php"
+                        class="inline-block bg-[#9AEBA3] text-[#012030] font-semibold px-6 py-2 rounded-full hover:bg-[#DAFDBA] transition">
                         LO QUIERO
                     </a>
                 </div>
@@ -104,15 +111,16 @@ require_once __DIR__ . '/../../config/config.php';
                     </div>
 
                     <!-- Botón inferior centrado -->
-                    
+
 
                 </div>
             </div>
             <div class="flex justify-center mt-6">
-                        <a href="#" class="inline-block bg-[#DAFDBA] text-[#012030] font-semibold px-6 py-2 rounded-full hover:bg-[#9AEBA3] transition">
-                            LO QUIERO
-                        </a>
-                    </div>
+                <a href="<?= BASE_URL ?>/app/views/contactanos.php"
+                    class="inline-block bg-[#9AEBA3] text-[#012030] font-semibold px-6 py-2 rounded-full hover:bg-[#DAFDBA] transition">
+                    LO QUIERO
+                </a>
+            </div>
         </div>
     </section>
 

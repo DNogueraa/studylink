@@ -23,6 +23,11 @@ $carruselPosts = $datos['carruselPosts'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../public/images/logo_mejorado.png" type="image/png">
+
+    <!-- css-->
     <link rel="stylesheet" href="../../public/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +42,7 @@ $carruselPosts = $datos['carruselPosts'];
     <?php include_once __DIR__ . '/layouts/header.php'; ?>
 
     <!-- Carrusel -->
-    <section class="bg-[#012030] text-white py-8 px-4">
+    <section class="bg-[#012030] text-white py-8 px-16">
         <h2 class="text-3xl font-semibold font-['Playfair_Display'] mb-6 text-center">Blog</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <?php foreach ($carruselPosts as $post): ?>
@@ -55,15 +60,18 @@ $carruselPosts = $datos['carruselPosts'];
     </section>
 
     <!-- Entrada principal -->
-    <section class="py-10 px-4 max-w-5xl mx-auto text-[#012030] bg-[white]">
-        <img src="<?= BASE_URL ?>/public/images/<?= htmlspecialchars($entradaPrincipal['imagen']) ?>"
-            alt="Imagen de <?= htmlspecialchars($entradaPrincipal['titulo']) ?>"
-            class="w-full max-h-[400px] object-contein rounded-xl shadow mb-6">
-        <h1 class="text-4xl font-bold font-['Playfair_Display'] mb-2"><?= $entradaPrincipal['titulo'] ?></h1>
-        <p class="text-sm text-gray-600 mb-6">Publicado el
-            <?= date('d \d\e F \d\e Y', strtotime($entradaPrincipal['fecha_publicacion'])) ?></p>
-        <div class="text-base font-['Poppins'] leading-relaxed space-y-4">
-            <?= nl2br($entradaPrincipal['contenido']) ?>
+    <section class="py-10 px-4 w-full text-[#012030] bg-[white]">
+        <div class="max-w-5xl mx-auto">
+            <img src="<?= BASE_URL ?>/public/images/<?= htmlspecialchars($entradaPrincipal['imagen']) ?>"
+                alt="Imagen de <?= htmlspecialchars($entradaPrincipal['titulo']) ?>"
+                class="w-full max-h-[400px] object-contein rounded-xl shadow mb-6">
+            <h1 class="text-4xl font-bold font-['Playfair_Display'] mb-2"><?= $entradaPrincipal['titulo'] ?></h1>
+            <p class="text-sm text-gray-600 mb-6">Publicado el
+                <?= date('d \d\e F \d\e Y', strtotime($entradaPrincipal['fecha_publicacion'])) ?>
+            </p>
+            <div class="text-base font-['Poppins'] leading-relaxed space-y-4">
+                <?= nl2br($entradaPrincipal['contenido']) ?>
+            </div>
         </div>
     </section>
 
@@ -89,7 +97,7 @@ $carruselPosts = $datos['carruselPosts'];
 
     <!-- Botón volver arriba -->
     <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-        class="fixed bottom-6 right-6 bg-[#45C4B0] hover:bg-[#DAFDBA] text-white p-3 rounded-full shadow-lg z-50 transition">
+        class="fixed bottom-6 right-6 bg-[#9AEBA3] hover:bg-[#DAFDBA] text-white p-3 rounded-full shadow-lg z-50 transition">
         ↑
     </button>
 

@@ -150,6 +150,9 @@ body h2, h3{
   margin-left: 5%;
   border: none;
   transition: background-color 0.3s;
+  text-decoration: none !important;
+    color: inherit !important;
+    font-weight: bold;
 }
 .butom_ver_tramite:hover{
     background-color: #DAFDBA;
@@ -225,7 +228,7 @@ body h2, h3{
   color: #012030 !important;
   align-items: center;
   justify-content: center;
-  height: 55px;
+  height: 35px;
   font-size: 15px;
   background-color: #9AEBA3;
   padding: 8px 14px;
@@ -233,6 +236,9 @@ body h2, h3{
   margin-left: 5%;
   border: none;
   transition: background-color 0.3s;
+  text-decoration: none !important;
+    color: inherit !important;
+    font-weight: bold;
 }
 
 .home_sec_2 article p{
@@ -305,6 +311,9 @@ body h2, h3{
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none !important;
+    color: inherit !important;
+    font-weight: bold;
 }
 
 .home_sec_3_button:hover {
@@ -461,6 +470,7 @@ body h2, h3{
   align-items: center;
 }
 
+
 .faqs_titulo {
   font-family: 'Playfair Display', serif;
   font-size: 50px;
@@ -474,6 +484,7 @@ body h2, h3{
   margin: 0;
 }
 
+
 .faqs_lista li {
   font-family: 'Poppins', sans-serif;
   text-align: center;
@@ -485,8 +496,14 @@ body h2, h3{
   cursor: pointer;
 }
 
-.faqs_lista li:hover {
-  color: #9AEBA3;
+.faqs_lista li a {
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: color 0.3s ease;
+}
+
+.faqs_lista li a:hover {
+  color: #9AEBA3 !important;
 }
 
 

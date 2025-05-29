@@ -13,8 +13,14 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyLink - Inicio</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../../public/images/logo_mejorado.png" type="image/png">
+
+    <!-- css -->
     <link rel="stylesheet" href="../../public/css/styles.css">
     <link rel="stylesheet" href="../../public/css/mediaQueryHome.css">
+
+    <!-- fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +34,7 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+
     <!--iconos-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -41,7 +48,7 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
         <section class="home_sec_1">
             <div>
                 <h1>StudyLink</h1>
-                <button id="abrirModal" class="butom_ver_tramite">VER TRAMITES</button>
+                <button id="abrirModal" class="butom_ver_tramite">VER TRÁMITES</button>
             </div>
             <div></div>
         </section>
@@ -63,7 +70,8 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
                     </p>
                 </div>
                 <div class="home_sec_2_div_button">
-                    <button class="button_mas_informacion"><strong>MÁS INFORMACIÓN</strong></button>
+                    <a href="<?= BASE_URL ?>/app/views/quienes_somos.php" class="button_mas_informacion">MÁS
+                        INFORMACIÓN</a>
                 </div>
             </article>
         </section>
@@ -76,7 +84,9 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
                     <h4>Con mi gente latino</h4>
                     <img src="<?= BASE_URL ?>/public/images/img_sec_tres.png" alt="Grupo de estudiantes latinos">
                     <div class="home_sec_3_button_container">
-                        <button class="home_sec_3_button">MÁS INFORMACIÓN</button>
+                        <a href="<?= BASE_URL ?>/app/views/gente_latino.php" class="home_sec_3_button">MÁS
+                            INFORMACIÓN</a>
+
                     </div>
                 </article>
 
@@ -86,7 +96,8 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
                     <img src="<?= BASE_URL ?>/public/images/img_sec_tres_dos.png"
                         alt="Pareja de estudiantes con portátil">
                     <div class="home_sec_3_button_container">
-                        <button class="home_sec_3_button">MÁS INFORMACIÓN</button>
+                        <a href="<?= BASE_URL ?>/app/views/combi_completa.php" class="home_sec_3_button">MÁS
+                            INFORMACIÓN</a>
                     </div>
                 </article>
             </div>
@@ -130,11 +141,13 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
                 <div class="faqs_derecha">
                     <h2 class="faqs_titulo">FAQs</h2>
                     <ul class="faqs_lista">
-                        <li>¿Cómo se realiza el pago del servicio de StudyLink?</li>
-                        <li>¿StudyLink ofrece apoyo después de que llegue a España?</li>
-                        <li>¿Puedo estudiar y trabajar en España al mismo tiempo?</li>
-                        <li>¿Necesito un seguro médico para estudiar en España?</li>
-                        <li>¿Qué pasa si mi visa de estudiante es rechazada?</li>
+                        <li><a href="faqs.php#faq-0">¿Cómo se realiza el pago del servicio de StudyLink?</a></li>
+                        <li><a href="faqs.php#faq-1">¿StudyLink ofrece apoyo después de que llegue a España?</a></li>
+                        <li><a href="faqs.php#faq-2">¿Puedo estudiar y trabajar en España al mismo tiempo?</a></li>
+                        <li><a href="faqs.php#faq-3">¿Necesito un seguro médico para estudiar en España?</a></li>
+                        <li><a href="faqs.php#faq-4">¿Qué pasa si mi visa de estudiante es rechazada?</a></li>
+
+
                     </ul>
                 </div>
             </div>
@@ -160,39 +173,39 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
                         -->
 
     <!-- Modal de Ver Trámite -->
-<div id="verTramiteModal" class="modal-overlay hidden">
-  <div class="modal-content">
-    <button id="cerrarModal" class="modal-close">&times;</button>
-    <h2 class="modal-titulo">Consulta tu trámite</h2>
+    <div id="verTramiteModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="cerrarModal" class="modal-close">&times;</button>
+            <h2 class="modal-titulo">Consulta tu trámite</h2>
 
-    <!-- FORMULARIO -->
-    <form id="formularioVerTramite">
-      <label for="identificador">Identificador del documento:</label>
-      <input type="text" id="identificador" name="identificador" placeholder="Ej: ABC123" required>
+            <!-- FORMULARIO -->
+            <form id="formularioVerTramite">
+                <label for="identificador">Identificador del documento:</label>
+                <input type="text" id="identificador" name="identificador" placeholder="Ej: ABC123" required>
 
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
 
-      <button type="submit" class="modal-submit">Ver</button>
-    </form>
+                <button type="submit" class="modal-submit">Ver</button>
+            </form>
 
-    <!-- RESPUESTA (fuera del formulario) -->
-    <div id="resultadoTramite" class="hidden">
-      <h3 class="modal-titulo">Información del trámite</h3>
-      <div id="contenidoTramite"></div>
+            <!-- RESPUESTA (fuera del formulario) -->
+            <div id="resultadoTramite" class="hidden">
+                <h3 class="modal-titulo">Información del trámite</h3>
+                <div id="contenidoTramite"></div>
 
-      <button type="button" id="consultarOtro" class="modal-submit">
-    Consultar otro trámite
-  </button>
-</div>
+                <button type="button" id="consultarOtro" class="modal-submit">
+                    Consultar otro trámite
+                </button>
+            </div>
+        </div>
+
+    </div>
     </div>
 
-  </div>
-</div>
-
     <script>
-  const BASE_URL = "<?= BASE_URL ?>";
-</script>
+        const BASE_URL = "<?= BASE_URL ?>";
+    </script>
     <script src="<?= BASE_URL ?>/app/scripts/verTramiteModal.js"></script>
 
     <script>
