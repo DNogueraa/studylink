@@ -41,7 +41,7 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
         <section class="home_sec_1">
             <div>
                 <h1>StudyLink</h1>
-                <button class="butom_ver_tramite"><strong>VER TRAMITES</strong></button>
+                <button id="abrirModal" class="butom_ver_tramite">VER TRAMITES</button>
             </div>
             <div></div>
         </section>
@@ -139,9 +139,62 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
                 </div>
             </div>
         </section>
-    <?php include_once __DIR__ . '/layouts/footer.php'; ?>
+        <?php include_once __DIR__ . '/layouts/footer.php'; ?>
 
     </main>
+    <!-- Modal emergente 
+<div id="verTramiteModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+
+  <div class="bg-white rounded-2xl shadow-lg w-[90%] max-w-lg p-6 relative text-[#012030]">
+    
+    <!- Botón cerrar 
+    <button id="cerrarModal" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold">
+      &times;
+    </button>
+
+    <!-- Contenido del modal 
+    <h2 class="text-2xl font-semibold mb-4 text-center">Consulta tu trámite</h2>
+    <p class="text-center text-sm text-gray-600">Aquí podrás consultar el estado de tu trámite ingresando tu identificador y correo electrónico.</p>
+  </div>
+</div>
+                        -->
+
+    <!-- Modal de Ver Trámite -->
+<div id="verTramiteModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <button id="cerrarModal" class="modal-close">&times;</button>
+    <h2 class="modal-titulo">Consulta tu trámite</h2>
+
+    <!-- FORMULARIO -->
+    <form id="formularioVerTramite">
+      <label for="identificador">Identificador del documento:</label>
+      <input type="text" id="identificador" name="identificador" placeholder="Ej: ABC123" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+      <button type="submit" class="modal-submit">Ver</button>
+    </form>
+
+    <!-- RESPUESTA (fuera del formulario) -->
+    <div id="resultadoTramite" class="hidden">
+      <h3 class="modal-titulo">Información del trámite</h3>
+      <div id="contenidoTramite"></div>
+
+      <button type="button" id="consultarOtro" class="modal-submit">
+    Consultar otro trámite
+  </button>
+</div>
+    </div>
+
+  </div>
+</div>
+
+    <script>
+  const BASE_URL = "<?= BASE_URL ?>";
+</script>
+    <script src="<?= BASE_URL ?>/app/scripts/verTramiteModal.js"></script>
+
     <script>
         new Glider(document.querySelector('.glider'), {
             slidesToShow: 1,
@@ -168,6 +221,8 @@ $postsBlog = $blogController->obtenerPostsRecientes(3);
             ]
         });
     </script>
+
+
 </body>
 
 </html>

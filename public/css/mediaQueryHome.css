@@ -1,5 +1,5 @@
 /* Home Sec 1 responsive */
-@media (max-width: 768px) {
+@media (max-width: 908px) {
   .home_sec_1 {
     flex-direction: column;
     height: auto;
