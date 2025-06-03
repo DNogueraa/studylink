@@ -48,10 +48,10 @@ require_once __DIR__ . '/../../config/config.php';
             <p class="mb-8 text-lg">Rellena tus datos</p>
 
             <div class="flex space-x-4 text-xl">
-                <a href="#"><i class="fab fa-facebook-f hover:text-[#9AEBA3]"></i></a>
-                <a href="#"><i class="fab fa-instagram hover:text-[#9AEBA3]"></i></a>
-                <a href="#"><i class="fab fa-tiktok hover:text-[#9AEBA3]"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in hover:text-[#9AEBA3]"></i></a>
+                <a href="https://www.facebook.com/people/StudyLink-Espa%C3%B1a/pfbid02tssUhEHgH1j8RacXozyxWMrTaxR9CTD5A6w4HGur7yP69yLEvR5hRcGUoJCVfx39l/?locale=es_ES" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f hover:text-[#9AEBA3]"></i></a>
+                <a href="https://www.instagram.com/studylink.es/?hl=es" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram hover:text-[#9AEBA3]"></i></a>
+                <a href="https://www.tiktok.com/@studylink.es" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok hover:text-[#9AEBA3]"></i></a>
+                <a href="https://www.linkedin.com/in/studylink-espa%C3%B1a-46a707364/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in hover:text-[#9AEBA3]"></i></a>
             </div>
         </div>
 

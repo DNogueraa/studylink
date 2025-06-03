@@ -27,10 +27,10 @@
         <div class="footer_columna">
             <p class="footer_siguenos">Síguenos</p>
             <div class="footer_redes">
-                <a href="https://www.facebook.com/people/StudyLink-Espa%C3%B1a/pfbid02tssUhEHgH1j8RacXozyxWMrTaxR9CTD5A6w4HGur7yP69yLEvR5hRcGUoJCVfx39l/?locale=es_ES"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/studylink.es/?hl=es"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@studylink.es"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://www.linkedin.com/in/studylink-espa%C3%B1a-46a707364/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/people/StudyLink-Espa%C3%B1a/pfbid02tssUhEHgH1j8RacXozyxWMrTaxR9CTD5A6w4HGur7yP69yLEvR5hRcGUoJCVfx39l/?locale=es_ES" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/studylink.es/?hl=es" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@studylink.es" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.linkedin.com/in/studylink-espa%C3%B1a-46a707364/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
         </div>
     </div>
