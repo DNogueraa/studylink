@@ -2,7 +2,7 @@
 // Detecta si estás en local o en producción automáticamente
 $protocolo = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
 $host = $_SERVER['HTTP_HOST'];
-$baseFolder = '/studylink'; // AJUSTA esto si el proyecto no está en esa carpeta
+$baseFolder = ''; // AJUSTA esto si el proyecto no está en esa carpeta
 define('BASE_URL', $protocolo . '://' . $host . $baseFolder);
 
 
